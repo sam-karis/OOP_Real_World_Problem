@@ -17,3 +17,21 @@ class person(object):
 				self.availabity = 'Still in the compound'
 			else:
 				self.availabity = 'Left the compund already'
+
+	def set_person_role(person):
+		if isinstance(person, staff):
+			self.role = "Observer"
+			return self
+		elif isinstance(person, student):
+			self.role = "Voter"
+			return self
+
+
+class staff(person):
+	def __init__(self):
+		self.category = 'Working'
+
+
+class student (person):
+	def __init__(self):
+		self.category = 'Studying'
